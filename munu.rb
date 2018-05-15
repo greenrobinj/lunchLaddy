@@ -1,7 +1,10 @@
-require_relative "main_dish"
 
+
+require_relative :main_dish
+attr_accessor :sides 
 #Dishs.new
 
+def inialize 
 #dish
 @nuggets = Dishs.new("Nuggets", 4.50)
 @pizza = Dishs.new("Pizza", 5.0)
@@ -21,6 +24,7 @@ require_relative "main_dish"
   @salad,
   @coke
 ]
+end
 
 #@small_lunch = [@side1 , @side2]
 
@@ -71,7 +75,9 @@ def side_dish
     pickle.info
   end
 
-  case lunch1
+  case 
+    lunch1 = sides
+  when
     @small_lunch1 = gets.strip.to_i
   when 1
     @small_lunch1 = @mac.info
@@ -91,6 +97,7 @@ def side_dish
   end
 
   case lunch2
+  when
     @small_lunch2 = gets.strip.to_i
   when 1
     @small_lunch2 = @mac.info
@@ -105,7 +112,7 @@ def side_dish
     puts "Well... you want one of these of not"
     side_dish
   end
-puts " You have" @big_lunch"," @small_lunch1", and "@small_lunch2"."
+puts " You have #{@big_lunch},#{@small_lunch1}, and #{@small_lunch2}."
 end
 
 loop do

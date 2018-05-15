@@ -1,7 +1,7 @@
 
 
 class Dishs
-  attr_accessor :name, :price
+  attr_accessor :name, :price, :sides
 
   def initialize (name, price)
     @name = name
@@ -12,13 +12,9 @@ class Dishs
     puts "#{@name}, -- $#{@price}"
   end
 
-  def sides
+  def @sides
     @side1 = gets.strip.to_i
     @side2 = gets.strip.to_i
     puts " you chose #{side1} and #{side2}"
   end
-    
 
-
-
-end
